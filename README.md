@@ -37,12 +37,12 @@
 
 ```
 🗂️ SVM_Diabetes_Health_Analytics/
-│
+│── README.md # You are here!!
 └── 📂 SVM Project - Diabetes Prediction/
     │
     ├── 📓 SVM_-_Diabetes_Prediction.ipynb   ← Full ML Pipeline Notebook
     └── 📊 diabetes.csv                       ← PIMA Indians Diabetes Dataset
-    └── README.md # You are here!!
+    
 ```
 
 ---
