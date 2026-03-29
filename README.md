@@ -2,7 +2,7 @@
 
 # 🩺 SVM Diabetes Health Analytics
 
-### *Harnessing the Power of Machine Learning to Predict Diabetes — Before It's Too Late*
+### *Harnessing the Power of Machine Learning to Predict Diabetes - Before It's Too Late*
 
 <br>
 
@@ -49,16 +49,16 @@
 
 ## 🎯 What Is This Project?
 
-This project builds a **clinical decision-support system** using the **Support Vector Machine (SVM)** algorithm — one of the most mathematically elegant and powerful classifiers in Machine Learning.
+This project builds a **clinical decision-support system** using the **Support Vector Machine (SVM)** algorithm - one of the most mathematically elegant and powerful classifiers in Machine Learning.
 
 Given a patient's diagnostic measurements, the model predicts:
 
 ```
-🟢  Outcome = 0  →  Non-Diabetic
-🔴  Outcome = 1  →  Diabetic
+🟢  Outcome = 0  ->  Non-Diabetic
+🔴  Outcome = 1  ->  Diabetic
 ```
 
-The dataset used is the legendary **PIMA Indians Diabetes Dataset** — a benchmark trusted by researchers worldwide, containing records of **768 female patients** aged 21 and above.
+The dataset used is the legendary **PIMA Indians Diabetes Dataset** - a benchmark trusted by researchers worldwide, containing records of **768 female patients** aged 21 and above.
 
 ---
 
@@ -121,7 +121,7 @@ The dataset used is the legendary **PIMA Indians Diabetes Dataset** — a benchm
 ## 🧪 Step-by-Step Notebook Breakdown
 
 <details>
-<summary><b>📦 Step 1 — Importing Libraries</b> (click to expand)</summary>
+<summary><b>📦 Step 1 - Importing Libraries</b> (click to expand)</summary>
 <br>
 
 ```python
@@ -139,7 +139,7 @@ from sklearn.metrics import accuracy_score
 ---
 
 <details>
-<summary><b>🔍 Step 2 — Exploratory Data Analysis (EDA)</b> (click to expand)</summary>
+<summary><b>🔍 Step 2 - Exploratory Data Analysis (EDA)</b> (click to expand)</summary>
 <br>
 
 | 🔎 Check | 📋 Result |
@@ -163,7 +163,7 @@ from sklearn.metrics import accuracy_score
 <summary><b>🛠️ Step 3 — Feature Engineering</b> (click to expand)</summary>
 <br>
 
-> ⚠️ **Hidden Missing Data Alert!** Columns like Glucose, Insulin, and BMI cannot biologically be zero. These were treated as **missing values** and replaced with **column medians** — a robust imputation strategy.
+> ⚠️ **Hidden Missing Data Alert!** Columns like Glucose, Insulin, and BMI cannot biologically be zero. These were treated as **missing values** and replaced with **column medians** - a robust imputation strategy.
 
 ```python
 zero_replace_columns = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
@@ -180,7 +180,7 @@ df.fillna(df.median(), inplace=True)
 ---
 
 <details>
-<summary><b>⚖️ Step 4 — Feature Scaling</b> (click to expand)</summary>
+<summary><b>⚖️ Step 4 - Feature Scaling</b> (click to expand)</summary>
 <br>
 
 SVM is highly sensitive to feature magnitude. **StandardScaler** transforms all features to have **mean = 0** and **standard deviation = 1**:
@@ -190,14 +190,14 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 ```
 
-> 💡 Scaling was fit **only on training data** and applied to test data — preventing data leakage!
+> 💡 Scaling was fit **only on training data** and applied to test data - preventing data leakage!
 
 </details>
 
 ---
 
 <details>
-<summary><b>🤖 Step 5 — SVM Model Training</b> (click to expand)</summary>
+<summary><b>🤖 Step 5 - SVM Model Training</b> (click to expand)</summary>
 <br>
 
 ```python
@@ -224,7 +224,7 @@ svm_model.fit(X_train, y_train)
 ---
 
 <details>
-<summary><b>📈 Step 6 — Model Evaluation</b> (click to expand)</summary>
+<summary><b>📈 Step 6 - Model Evaluation</b> (click to expand)</summary>
 <br>
 
 ```python
@@ -238,14 +238,14 @@ test_accuracy  = accuracy_score(y_test,  svm_model.predict(X_test))
 └── 🧪  Testing Accuracy   →  ~75%
 ```
 
-> ✅ **Only ~2% generalization gap** — the model is NOT overfitting. It performs consistently on unseen data!
+> ✅ **Only ~2% generalization gap** - the model is NOT overfitting. It performs consistently on unseen data!
 
 </details>
 
 ---
 
 <details>
-<summary><b>🔮 Step 7 — Predictive System (Live Demo)</b> (click to expand)</summary>
+<summary><b>🔮 Step 7 - Predictive System (Live Demo)</b> (click to expand)</summary>
 <br>
 
 Drop in any patient's data and get an instant prediction:
@@ -332,8 +332,8 @@ jupyter
 
 | 📄 File | 📋 What's Inside |
 |:---|:---|
-| `SVM_-_Diabetes_Prediction.ipynb` | Complete ML pipeline: EDA → Engineering → Scaling → Training → Evaluation → Prediction (38 cells) |
-| `diabetes.csv` | PIMA Indians Diabetes Dataset — 768 rows, 9 columns, zero missing values |
+| `SVM_-_Diabetes_Prediction.ipynb` | Complete ML pipeline: EDA → Engineering -> Scaling -> Training -> Evaluation -> Prediction (38 cells) |
+| `diabetes.csv` | PIMA Indians Diabetes Dataset - 768 rows, 9 columns, zero missing values |
 
 ---
 
@@ -344,7 +344,7 @@ jupyter
 > 💉 **537 million adults** worldwide live with diabetes (IDF, 2021).
 > Early detection can **reduce complications by up to 58%** through lifestyle intervention.
 >
-> This project demonstrates how a **lightweight ML model** can serve as a **first-line screening tool** — fast, accessible, and accurate.
+> This project demonstrates how a **lightweight ML model** can serve as a **first-line screening tool** - fast, accessible, and accurate.
 
 </div>
 
@@ -371,7 +371,7 @@ Distributed under the **MIT License** — see [`LICENSE`](LICENSE) for details.
 
 <div align="center">
 
-### 💬 *"Machine Learning in Healthcare isn't about replacing doctors — it's about giving them better tools."*
+### 💬 *"Machine Learning in Healthcare isn't about replacing doctors - it's about giving them better tools."*
 
 <br>
 
